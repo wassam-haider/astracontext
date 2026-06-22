@@ -1,0 +1,65 @@
+ASTRA Session Summary
+Date: Tuesday, June 23, 2026
+AI Tool: Claude Sonnet 4.6 (claude.ai)
+Prepared by: Syed Wassam Haider (SP23-BSSE-0013)
+
+---
+
+WORKED ON TODAY
+
+- Walked through how the Scanner Agent processes real Nmap output (scanme.nmap.org)
+  into structured CVE findings using RAG + Nikto + Searchsploit.
+- Walked through how the Exploit Agent uses scanner output to either select an
+  existing ExploitDB script or generate exploit code grounded in the CVE description.
+- Explained ExploitDB's data format: the CSV index structure, exploit file header
+  format, and how Maaz's ingestion pipeline should parse and embed it into ChromaDB.
+- Discussed minimum LLM parameter requirements per agent, with optimistic estimates
+  for smallest viable models (DeepSeek-R1 1.5B distill flagged as best
+  reasoning-per-parameter option).
+- Produced two inline pipeline diagrams (Scanner Agent flow, Exploit Agent decision
+  flow) and a plain 5-line project summary.
+
+---
+
+DECISIONS MADE
+
+- ExploitDB ingestion should use the official CSV index as the primary source,
+  not web scraping.
+- Exploit Agent should follow a two-path design: select existing ExploitDB script
+  if Searchsploit returns a match, otherwise generate code grounded in NVD record.
+- 7B remains the benchmark baseline for the 3-LLM comparison; 1.5B–3B runs are
+  a bonus finding if time permits.
+
+---
+
+OUTPUTS PRODUCED
+
+- Scanner Agent pipeline diagram (inline SVG, chat only — not saved to repo)
+- Exploit Agent decision flow diagram (inline SVG, chat only — not saved to repo)
+- ExploitDB ChromaDB ingestion code snippet (chat only — not committed)
+- 5-line ASTRA project summary (chat only)
+
+---
+
+STILL OPEN
+
+- ExploitDB ingestion code not yet integrated into the actual codebase.
+- 1.5B/3B bonus benchmark runs not planned or scheduled yet.
+- No discussion of how the Exploit Agent detects success vs failure
+  (still a pending output requirement noted in project memory).
+
+---
+
+FOR NEXT SESSION
+
+Pick up with exploit success/failure detection logic — how the Exploit Agent
+knows whether an attempt worked and how that signal feeds into Arham's
+evaluation model and the final report.
+
+---
+File: ASTRA_session_20260623_07.txt
+Generated: 2026-06-23 | timezone: PKT (UTC+5)
+By: Syed Wassam Haider
+Repo: https://github.com/wassam-haider/astracontext.git
+Serial: 07
+---

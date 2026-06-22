@@ -1,0 +1,69 @@
+ASTRA SESSION SUMMARY
+─────────────────────────────────────────────────────────────
+Date: June 23, 2025
+Time: End of session (PKT, UTC+5)
+Name: Syed Wassam Haider
+Tool: Claude (claude.ai) — Sonnet 4.6
+─────────────────────────────────────────────────────────────
+
+WORKED ON TODAY
+- Discussed and finalized the project scope: web application
+  vulnerabilities only, tested on Metasploitable2 as the
+  single benchmark machine.
+- Decided on 3 specific vulnerability categories to evaluate:
+  Broken Access Control (A01), SQL Injection (A03), and
+  Vulnerable Components (A06) from OWASP Top 10.
+- Understood how tools (Nmap, Gobuster, SQLMap etc.) discover
+  endpoints and input boxes so the LLM never has to guess —
+  it only acts on what tools already confirmed exists.
+- Clarified hardware limits: VRAM (8GB) is the real ceiling
+  for LLM quality, RAM upgrade to 32GB helps stability and
+  ChromaDB sizing but not inference speed.
+- Understood how LangChain/LangGraph lives in system RAM and
+  where the memory pressure actually comes from during a full
+  pipeline run.
+- Confirmed how to frame a narrow 3-vulnerability evaluation
+  so the paper can still make generalized pentesting claims
+  without overstating scope.
+
+DECISIONS MADE
+- Scope locked to web application layer only (no network,
+  no LLM/cloud testing).
+- Benchmark locked to Metasploitable2 only.
+- 3 vulnerability categories selected: A01, A03, A06.
+- Tools to use: Nmap, Gobuster, SQLMap, Searchsploit + RAG.
+  Nikto and Hydra dropped from primary scope.
+- RAM upgrade to 32GB recommended and agreed upon.
+- Paper generalization claim will be framed as methodology
+  generalization, not coverage generalization.
+- Project name clarification needed: PwnPilot vs ASTRA still
+  floating (see Open below).
+
+OUTPUTS PRODUCED
+- None. This was a planning and decision session only.
+  No code, files, or documents were created or modified.
+
+STILL OPEN
+- Project name not formally locked: proposal says PwnPilot,
+  all literature review docs say ASTRA. Needs one decision
+  before final submission.
+- Exploit success/failure detection logic not yet designed
+  for the 3 chosen vulnerability categories — needed before
+  benchmark runs begin.
+- Task completion criteria not yet formally written down for
+  A01, A03, A06 (briefly discussed but not documented).
+
+FOR NEXT SESSION
+- Write formal task completion criteria for each of the 3
+  vulnerability categories (what counts as pass/fail per run).
+- Begin or review exploit detection logic for SQLMap and
+  Searchsploit outputs so the evaluation model has ground
+  truth to score against.
+
+---
+File: ASTRA_session_20250623_09.txt
+Generated: 2025-06-23 — end of session (PKT, UTC+5)
+By: Syed Wassam Haider
+Repo: https://github.com/wassam-haider/astracontext.git
+Serial: 09
+---

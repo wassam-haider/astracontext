@@ -1,0 +1,39 @@
+ASTRA — Session Changelog
+ASTRA Session Summary
+Date: June 23, 2026
+AI Tool: Claude Sonnet 4.6 (claude.ai)
+
+Header
+Date: 2026-06-23
+Time: (session time)
+Name: [your name]
+AI Tool: Claude (Anthropic)
+
+Worked On Today
+- Clarified overall SLR workflow: collect ~20 papers → cut to 10–15 by relevance → find proper SLR template → then build the review.
+- Confirmed the 4 IEEE papers already downloaded are the starting point; 16 more to gather before any filtering or writing begins.
+- Asked how to efficiently search for the remaining 16+ papers on LLM agents for penetration testing.
+- Received a structured search plan covering Google Scholar, IEEE Xplore (premium), arXiv cs.CR, Semantic Scholar, ACM DL, snowballing references, and specific query strings.
+
+Decisions Made
+- SLR building is paused until at least 20 candidate papers are collected.
+- Filtering to 10–15 will happen before any template selection or writing starts.
+
+Outputs Produced
+- No files or code generated this session. Output was limited to search strategy guidance in chat.
+
+Still Open
+- The 16 additional papers have not yet been searched for or downloaded.
+- No SLR template has been selected.
+- The existing 4 papers have not yet been numbered or integrated into the existing literature list (pending final paper selection).
+
+For Next Session
+- Begin executing the search plan (Google Scholar / IEEE Xplore / arXiv) and start downloading candidate papers.
+
+---
+File: ASTRA_session_20260623_13.txt
+Generated: 2026-06-23 [time, TZ]
+By: [your name]
+Repo: [paste your GitHub repo URL here]
+Serial: 13
+---

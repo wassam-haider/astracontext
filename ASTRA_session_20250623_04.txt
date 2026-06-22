@@ -1,0 +1,46 @@
+ASTRA SESSION SUMMARY
+=====================
+Date: June 23, 2026
+AI Tool: Claude Sonnet 4.6 (claude.ai)
+Prepared by: Syed Wassam Haider (SP23-BSSE-0013)
+
+WORKED ON TODAY
+---------------
+- Explored which MCP servers could help the ASTRA project (registry unavailable due to opt-in not completed; discussed likely useful ones: GitHub, Google Drive)
+- Investigated whether cybersecurity-specific MCP connectors exist (concluded none readily available; CVE/MITRE are better accessed directly via their own APIs)
+- Clarified that the vectorized enterprise-attack.json is the complete MITRE dataset — nothing missing vs the website
+- Discussed Burp Suite CLI/headless mode feasibility for ASTRA; concluded it conflicts with the open-source/zero-cost novelty claim and should be excluded
+- Identified two key evaluation findings: 7B-13B models cannot reliably write exploit scripts, and pipeline latency causes crashes on long sessions
+- Received learning resource recommendations for LangGraph, RAG, and cybersecurity tools
+
+DECISIONS MADE
+--------------
+- Burp Suite ruled out — paid license breaks ASTRA's zero-cost open-source claim
+- LLM role reframed: ASTRA selects and retrieves exploit scripts, it does not generate them
+- Metasploit module selection (via subprocess) preferred over raw script generation
+- GitHub Search API tool wrapper preferred over MCP server for exploit PoC retrieval (simpler, same result)
+- Checkpoint saving pattern adopted to prevent pipeline crash data loss
+
+OUTPUTS PRODUCED
+----------------
+- No files, code, or documents created this session
+- Checkpoint pattern (Python snippet) discussed but not saved to repo
+
+STILL OPEN
+----------
+- RAG mismatch issue (CVE and MITRE not matching inputs) identified but fix not implemented — needs chunk size reduction, separate collections confirmed, and cleaner query string extraction
+- ExploitDB CSV matching imprecision not resolved — GitHub Search API tool not yet written
+- MCP connector registry search incomplete — user never completed opt-in prompt
+- Exploit success/fail detection logic for report generation discussed but not written
+
+FOR NEXT SESSION
+----------------
+Fix the RAG pipeline first — clean up chunk sizes, confirm CVE and MITRE are in separate ChromaDB collections, and switch queries from raw scan output to extracted service strings. Then write the GitHub Search API tool wrapper for exploit PoC retrieval.
+
+---
+File: ASTRA_session_20250623_04.txt
+Generated: June 23, 2026 — end of session (PKT, UTC+5)
+By: Syed Wassam Haider
+Repo: https://github.com/wassam-haider/astracontext.git
+Serial: 04
+---

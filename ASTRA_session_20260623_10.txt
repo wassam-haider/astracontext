@@ -1,0 +1,83 @@
+ASTRA Session Summary
+Date: June 23, 2026
+AI Tool: Claude Sonnet 4.6 (claude.ai)
+
+---
+
+WORKED ON TODAY
+
+- Reviewed all four uploaded project documents
+  (Literature Review, Gap Table, Statistical Analysis,
+  Project Proposal) to establish session context.
+
+- Discussed what a proper SLR (Systematic Literature
+  Review) looks like and how it differs from a regular
+  literature review — key point: reproducibility and
+  transparent methodology are what make it an SLR.
+
+- Identified all 8 diagrams needed for ASTRA's SLR
+  chapter, mapped specifically to the project's 27
+  papers and 7 research categories.
+
+- Produced detailed, ready-to-paste Gemini prompts
+  for all 8 diagrams with exact data from the project
+  documents pre-filled.
+
+---
+
+DECISIONS MADE
+
+- The uploaded Nathaniel et al. (2026) paper is used
+  as a writing style/tone reference only, not as an
+  SLR structural template (it is an empirical study,
+  not an SLR).
+
+- 8 diagrams confirmed for the SLR:
+  PRISMA flowchart, Annual Publication Trend,
+  Venue Distribution, Category Distribution,
+  Capability Feature Matrix, Research Gap Map,
+  Evolution Timeline, RQ Mapping Table.
+
+---
+
+OUTPUTS PRODUCED
+
+- 8 Gemini diagram prompts (inline, not saved as
+  a file — ready to copy-paste directly into Gemini).
+  No code files, no docx, no committed files this
+  session.
+
+---
+
+STILL OPEN
+
+- Diagrams not yet generated — prompts are ready
+  but Gemini output not yet produced or reviewed.
+
+- Figure captions for each diagram (for the actual
+  SLR document) were offered but not written yet.
+
+- SLR document itself (Introduction, Methodology,
+  RQs, Results sections) not started — only the
+  diagram layer was addressed today.
+
+- PRISMA numbers used in the prompt are estimated
+  placeholders — need Maaz to confirm actual database
+  search counts before finalizing.
+
+---
+
+FOR NEXT SESSION
+
+Start generating diagrams in Gemini using the prompts
+produced today. Once diagrams are reviewed, write the
+figure captions and then begin drafting the SLR
+Methodology section (search strategy + PRISMA).
+
+---
+File: ASTRA_session_20260623_10.txt
+Generated: June 23, 2026 [local time — Karachi PKT]
+By: Claude Sonnet 4.6
+Repo: https://github.com/wassam-haider/astracontext.git
+Serial: 10
+---

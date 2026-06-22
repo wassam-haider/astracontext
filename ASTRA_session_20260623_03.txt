@@ -1,0 +1,62 @@
+ASTRA SESSION SUMMARY
+=====================
+Date: June 23, 2026
+Time: End of session (PKT, UTC+5)
+Author: Claude (Anthropic — claude.ai web chat, Claude Sonnet 4.6)
+Project: ASTRA — Autonomous Security Testing and Reconnaissance Agent
+
+---
+
+WORKED ON TODAY
+---------------
+- Reviewed what MCPs are connected and whether any could genuinely help ASTRA work sessions; concluded Google Drive (already connected), alphaXiv, and Consensus are the three worth having.
+- Connected and loaded alphaXiv and Consensus MCP tools mid-session; both are now active and usable going forward.
+- Identified four concrete project risks: (1) novelty claims collapsing if newer papers exist, (2) hallucination metric lacking a clear ground truth, (3) benchmark size being challenged at defense, (4) DeepSeek-R1 context window overflowing during long DVWA runs.
+- Read the actual full text of PentestGPT (arXiv 2308.06782) and HackingBuddyGPT (arXiv 2310.11409) live via alphaXiv — confirmed exact benchmark sizes, limitations, and quotes directly from source.
+- Searched Consensus for peer-reviewed research on hallucination evaluation methods and RAG's effect on factual accuracy — found citable papers for Arham's evaluation model methodology.
+- Produced a complete research-backed solution for all four risks with specific citations, defense answers, and one concrete code fix recommendation.
+
+---
+
+DECISIONS MADE
+--------------
+- alphaXiv and Consensus are the two MCPs to connect going forward (Google Drive already connected); no others needed for ASTRA research work.
+- Hallucination ground truth for Arham's evaluation model = binary CVE field match against NVD (CVE ID, affected product, MITRE T-number) — no complex deep learning scoring needed for the ground truth layer.
+- ASTRA's 18-run benchmark is academically defensible; defense answer locked in citing HackingBuddyGPT (12 cases, EMSE 2026) and tinyBenchmarks (ICML 2024).
+- DeepSeek context risk mitigation = state compaction trigger at ~6K tokens, citing HackingBuddyGPT's own state-compaction finding (doubled GPT-3.5 success rate).
+
+---
+
+OUTPUTS PRODUCED
+----------------
+- No code files written or changed today.
+- No diagrams produced.
+- This session summary file: ASTRA_session_20260623_03.txt
+- Key research findings documented in chat (not yet committed):
+    * PentestGPT explicitly calls RAG "an avenue for future research" (page 12) — direct quote usable at defense.
+    * HackingBuddyGPT benchmark = 12 test cases; GPT-4-Turbo hit 83% with guidance, Llama3-8b hit 0%.
+    * Drowzee (ACM 2024) gives hallucination measurement methodology with rates of 24.7–59.8% across 6 LLMs.
+    * RAG reduced hallucination from 68% to 10% in one peer-reviewed study (Zhang 2025, Applied and Computational Engineering).
+
+---
+
+STILL OPEN
+----------
+- Benchmark runs have not been executed yet — results table still empty; bar charts and RAG vs no-RAG comparison visuals not yet made.
+- Arham still needs to implement the binary CVE-match ground truth scoring in code.
+- State compaction fix for DeepSeek not yet coded into the pipeline.
+- Research findings from today (quotes, citations) not yet written into the actual paper or literature review document.
+
+---
+
+FOR NEXT SESSION
+----------------
+Start by running at least one benchmark condition (e.g., Llama 3.1 + no RAG on SQL Injection) and logging the raw output. Once even partial scores exist, bring them here and bar charts + the RAG vs no-RAG comparison table can be generated immediately.
+
+---
+File: ASTRA_session_20260623_03.txt
+Generated: 2026-06-23 (end of session, PKT UTC+5)
+By: Claude (Anthropic — claude.ai, Claude Sonnet 4.6)
+Repo: https://github.com/wassam-haider/astracontext.git
+Serial: 03
+---

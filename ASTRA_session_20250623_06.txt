@@ -1,0 +1,48 @@
+ASTRA SESSION SUMMARY
+=====================
+Date: June 23, 2026
+AI Tool: Claude Sonnet 4.6 (claude.ai)
+Project: ASTRA — Autonomous Security Testing and Reconnaissance Agent
+
+---
+
+WORKED ON TODAY
+---------------
+- Discussed benchmark strategy for comparing 4 LLMs (Llama 3.1, Mistral 7B, DeepSeek-R1, Qwen 2.5) on pentesting tasks
+- Evaluated PortSwigger Web Security Academy labs as a lightweight, free, pass/fail benchmark approach
+- Selected 6 specific labs across 3 OWASP categories (SQLi A03, Access Control A01, Vulnerable Components A06)
+- Defined a 4-point scoring rubric per lab (attack type, payload, CVE accuracy, fix)
+- Designed the full test run structure: 6 labs x 4 models x RAG/no-RAG = 48 runs total
+- Produced a step-by-step testing guide with a standard prompt template and blank results table
+
+DECISIONS MADE
+--------------
+- PortSwigger labs chosen as the benchmark environment (free, standardized, pass/fail)
+- Qwen 2.5 7B added as a 4th LLM alongside the original 3 (note: update proposal docs if needed)
+- Scoring: 4 points per lab, hallucinated CVE = automatic 0 on CVE criterion
+- RAG simulation for now = prepend NVD CVE description manually to prompt before lab description
+- Total possible score per model = 24 points (6 labs x 4 criteria)
+
+OUTPUTS PRODUCED
+----------------
+- Interactive benchmark widget (rendered in chat): step-by-step guide + blank results table for all 4 LLMs across 6 labs
+- Standard prompt template for consistent testing across all models
+- This session summary file
+
+STILL OPEN
+----------
+- Actual benchmark runs not yet performed — table is blank, needs scores filled in
+- Qwen 2.5 addition not reflected in proposal documents yet — needs updating
+- Bar chart and RAG vs no-RAG comparison chart pending until scores are collected
+
+FOR NEXT SESSION
+----------------
+Run the 48 benchmark tests and share scores. Claude will generate the final bar chart and RAG vs no-RAG delta chart ready for the paper.
+
+---
+File: ASTRA_session_20250623_06.txt
+Generated: June 23, 2026 — PKT (UTC+5)
+By: Claude Sonnet 4.6
+Repo: https://github.com/wassam-haider/astracontext.git
+Serial: 06
+---

@@ -1,0 +1,58 @@
+ASTRA Session Summary
+=====================
+ASTRA Session Summary
+Date: June 23, 2026
+AI Tool: Claude Sonnet 4.6 (claude.ai)
+
+Worked On Today
+---------------
+- Reviewed how ASTRA uses AI agents beyond just LLMs — multi-agent
+  orchestration, RAG, tool execution, and an evaluation model all
+  work together, not just a single language model calling the shots.
+- Identified the exact frameworks powering the agent system: LangGraph
+  for orchestration, ReAct for reasoning loops, ChromaDB for the RAG
+  vector store, and Ollama for local LLM execution.
+- Mapped out which team member owns which AI component (Wassam:
+  agents + orchestration, Maaz: RAG pipeline, Arham: deep learning
+  evaluation model).
+- Clarified the difference between "just an LLM" and a true agent
+  system — tool execution, state management, error recovery, and
+  multi-agent coordination all happen outside the LLM.
+- Converted the Claude conversation into this structured session
+  summary for the project changelog.
+
+Decisions Made
+--------------
+- Confirmed LangGraph + ReAct as the official agent framework
+  description for the project defense.
+- Locked in the four-agent breakdown (Orchestrator, Recon, Scanner,
+  Exploit, Report) as the canonical architecture explanation.
+
+Outputs Produced
+----------------
+- ASTRA_session_20260623_11.txt — this session summary file, capturing
+  the framework identification and architecture clarification from
+  the Claude chat.
+
+Still Open
+----------
+- No visual diagram was created in this session (Claude offered one
+  but it wasn't generated).
+- Deep learning evaluation model specifics (TensorFlow vs PyTorch,
+  architecture type) remain unspecified in the docs — needs
+  confirmation from Arham.
+
+For Next Session
+----------------
+- Create or request the visual architecture diagram showing the full
+  AI stack (LLM → LangGraph → RAG → Tools → Evaluation).
+- Pin down the evaluation model's exact architecture and framework
+  choice for documentation completeness.
+
+---
+File: ASTRA_session_20260623_11.txt
+Generated: 2026-06-23 [time, with timezone]
+By: [your name]
+Repo: [paste your GitHub repo URL here]
+Serial: 11
+---

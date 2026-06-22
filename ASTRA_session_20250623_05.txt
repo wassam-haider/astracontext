@@ -1,0 +1,46 @@
+ASTRA SESSION SUMMARY
+=====================
+Date: June 23, 2026
+AI Tool: Claude Sonnet 4.6 (claude.ai)
+Project: ASTRA — Autonomous Security Testing and Reconnaissance Agent
+
+---
+
+WORKED ON TODAY
+---------------
+- Reviewed uploaded project documents: Literature Review, Gap Table, Statistical Analysis, and Project Proposal
+- Hit a benchmark wall: PortSwigger Labs blocked after Lab 1 because further labs require Burp Suite, which is paid and conflicts with ASTRA's open-source scope
+- Evaluated Metasploitable2 as an alternative benchmark target — ruled out due to setup time
+- Settled on DVWA (Damn Vulnerable Web Application) as the benchmark environment going forward
+- Identified 3 specific vulnerabilities on DVWA suitable for the 18-condition benchmark run
+
+DECISIONS MADE
+--------------
+- PortSwigger results from Lab 1 retained as supplementary evidence only, not primary benchmark
+- DVWA is the confirmed primary benchmark environment (Docker, security set to Low)
+- Three benchmark vulnerabilities locked in: SQL Injection, Brute Force login, Command Injection
+- Metasploitable2 ruled out for this phase due to time constraints
+
+OUTPUTS PRODUCED
+----------------
+- No code, files, or documents created this session
+- Benchmark strategy advice given verbally (not written to a file)
+
+STILL OPEN
+----------
+- 18 benchmark runs not yet started (3 vulnerabilities × 3 LLMs × 2 RAG conditions)
+- Pass/fail detection logic for exploit success still needs to be implemented
+- Results data not yet collected — no scores, no charts yet
+
+FOR NEXT SESSION
+----------------
+- Start DVWA Docker instance, run all 18 benchmark conditions, record CVE precision / task completion / hallucination rate per run
+- Share results with Claude to generate bar charts and RAG vs no-RAG comparison visuals for the paper
+
+---
+File: ASTRA_session_20250623_05.txt
+Generated: June 23, 2026 — Pakistan Standard Time (PKT, UTC+5)
+By: Claude Sonnet 4.6
+Repo: https://github.com/wassam-haider/astracontext.git
+Serial: 05
+---

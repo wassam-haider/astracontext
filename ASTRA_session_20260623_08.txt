@@ -1,0 +1,75 @@
+ASTRA Session Summary
+=====================
+Date: June 23, 2026
+AI Tool: Claude Sonnet 4.6 (claude.ai)
+Prepared by: Syed Wassam Haider (SP23-BSSE-0013)
+
+WORKED ON TODAY
+---------------
+- Clarified what data gets stored in ChromaDB RAG vector DB across all four
+  categories: CVE/NVD records, MITRE ATT&CK entries, ExploitDB records,
+  and ATT&CK technique-to-tool mappings.
+
+- Got exact data formats for all four ChromaDB collections including raw
+  source JSON/CSV structure, what text gets embedded, what goes in metadata,
+  and sample ChromaDB add/query calls.
+
+- Reviewed 10 RAG architecture types and identified the best fit for ASTRA:
+  Agentic RAG as primary, with Adaptive and Corrective RAG layered on top.
+  Got a defense-ready one-line description of ASTRA's RAG architecture.
+
+- Got a full list of all tools and libraries needed to learn for ASTRA
+  integration, organized by category with priority learning order specific
+  to Wassam's ownership areas.
+
+- Clarified the LLM's role in exploitation: LLM does NOT generate exploit
+  code. It selects verified exploits from ExploitDB, constructs run commands,
+  and interprets output. Got four complete prompt templates for the Exploit
+  Agent covering selection, command construction, output interpretation,
+  and the one narrow case where a simple payload is acceptable (SQLi/LFI).
+
+- Got direct links for all four data sources: NVD API, MITRE ATT&CK GitHub,
+  ExploitDB GitLab, and ATT&CK tool mapping resources, with recommended
+  ingestion order.
+
+DECISIONS MADE
+--------------
+- LLM role in exploitation locked: reasoning and orchestration only,
+  no exploit code generation from scratch.
+- RAG architecture locked: Agentic RAG + Adaptive + Corrective layered hybrid.
+- Four separate ChromaDB collections confirmed: cve_nvd, mitre_attck,
+  exploitdb, tool_mappings.
+- ExploitDB ingestion via GitLab CSV (files_exploits.csv) confirmed as
+  correct approach, not website scraping.
+- Embedding model confirmed: all-MiniLM-L6-v2 via Sentence-Transformers.
+
+OUTPUTS PRODUCED
+----------------
+- No files, code files, or documents were created or saved to disk.
+  All outputs were in-chat reference material only.
+  Key reference content produced:
+    * Four ChromaDB collection schemas with full Python code examples
+    * Four Exploit Agent prompt templates (JSON-structured output format)
+    * Full tool-learning roadmap organized by priority for Wassam
+    * Data source links table with ingestion order recommendation
+
+STILL OPEN
+----------
+- Actual ingestion scripts for CVE/NVD, ATT&CK, and ExploitDB not yet written.
+- ChromaDB collection setup code not yet implemented in the repo.
+- Exploit Agent prompts not yet integrated into LangGraph nodes.
+- Similarity score threshold for Corrective RAG re-retrieval not decided.
+
+FOR NEXT SESSION
+----------------
+Start with writing the actual ingestion script for one collection end-to-end
+(recommended: ExploitDB CSV → ChromaDB) as a working proof of concept,
+then replicate the pattern for NVD and ATT&CK.
+
+---
+File: ASTRA_session_20260623_08.txt
+Generated: June 23, 2026 | timezone: PKT (UTC+5)
+By: Syed Wassam Haider
+Repo: https://github.com/wassam-haider/astracontext.git
+Serial: 08
+---

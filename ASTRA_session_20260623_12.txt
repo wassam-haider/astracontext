@@ -1,0 +1,34 @@
+
+ASTRA Session Changelog — 25 Mar 2026 (Claude Chat)
+
+ASTRA Session Summary
+Date: June 23, 2026
+AI Tool: Claude Sonnet 4.6 (claude.ai)
+
+Worked On Today
+- Reviewed FYP proposal content for ASTRA (autonomous penetration testing framework).
+- Created a 10‑slide defence presentation (.pptx) for the proposal defence.
+- Designed slides with a dark cybersecurity theme (midnight black, cyan, purple).
+- Included architecture diagram, competitive comparison table, methodology pipeline, and full tech stack.
+- Finalised slide order: Title → Problem → What is ASTRA → Architecture → Features → Competition → Objectives → Method → Stack → Thank You.
+
+Decisions Made
+- Adopted a dark slide theme (black/cyan/purple) for the defence deck.
+- Locked the 10‑slide structure and content flow for the presentation.
+
+Outputs Produced
+- File: ASTRA_fyp_defense.pptx (10‑slide defence presentation)
+
+Still Open
+- No unfinished tasks; deck ready for review.
+
+For Next Session
+- Present the deck to supervisor and gather feedback for any adjustments.
+
+---
+File: ASTRA_session_20260325_12.txt
+Generated: 2026-06-23 14:30:00 UTC
+By: [Your Name]
+Repo: [https://github.com/yourusername/ASTRA]
+Serial: 12
+---
