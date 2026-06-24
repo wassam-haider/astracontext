@@ -1,0 +1,44 @@
+ASTRA Session Changelog
+1. Header
+
+Date: 25 June 2026
+
+Time: Current session
+
+Assistant: ChatGPT (GPT-5.5)
+
+Chat: AQI Project – DagsHub MLflow / Streamlit Debugging
+
+2. Worked On Today
+
+Investigated MLflow model loading failure in the Streamlit application.
+
+Identified that Streamlit was connecting to a local MLflow SQLite backend instead of the DagsHub MLflow registry.
+
+Verified that the production alias had been created in the DagsHub model registry.
+
+Diagnosed that the remaining issue is a tracking URI / registry connection mismatch rather than a missing model alias.
+
+3. Decisions Made
+
+Continue using the registered model alias production (models:/aqi_best_model@production or equivalent alias syntax) instead of hardcoding model versions.
+
+Streamlit must use the exact same MLflow tracking URI and credentials as the training pipeline before attempting to load any registered model.
+
+4. Outputs Produced
+
+Debugging guidance for configuring MLflow tracking in streamlit_app.py.
+
+Recommended verification snippet using MlflowClient.get_model_version_by_alias() to test registry connectivity.
+
+5. Still Open
+
+Streamlit still cannot resolve the production alias because it is connecting to the wrong MLflow backend.
+
+Need to verify environment variables (DAGSHUB_USERNAME, DAGSHUB_TOKEN, DAGSHUB_REPO) are loaded correctly inside Streamlit and that mlflow.set_tracking_uri() is executed before load_model().
+
+6. For Next Session
+
+Inspect streamlit_app.py from top to bottom to verify MLflow configuration order and environment loading.
+
+Confirm the app is connected to DagsHub MLflow by printing the tracking URI and testing MlflowClient.get_model_version_by_alias() before loading the model.
